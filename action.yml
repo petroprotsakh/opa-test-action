@@ -1,0 +1,14 @@
+name: OPA Test
+description: Run Open Policy Agent tests
+inputs:
+  opa_version:
+    description: Version of Open Policy Agent to test on
+    required: false
+    default: latest
+runs:
+  using: docker
+  image: docker://openpolicyagent/opa:${{ inputs.opa_version }}
+  args:
+    - test
+    - ./
+    - -v
