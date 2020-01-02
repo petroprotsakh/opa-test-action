@@ -1,14 +1,14 @@
 name: OPA Test
 description: Run Open Policy Agent tests
 inputs:
-  opa_version:
-    description: Version of Open Policy Agent to test on
+  tests:
+    description: Rego file or directory path where to discover tests. Defaults to repository root.
     required: false
-    default: latest
+    default: ./
 runs:
   using: docker
-  image: docker://openpolicyagent/opa:${{ inputs.opa_version }}
+  image: docker://openpolicyagent/opa:latest
   args:
     - test
-    - ./
+    - ${{ inputs.tests }}
     - -v
