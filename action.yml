@@ -1,5 +1,9 @@
 name: OPA Test
 description: Run Open Policy Agent tests
+author: Petro Protsakh
+branding:
+  icon: check-square
+  color: green
 inputs:
   tests:
     description: Rego file or directory path where to discover tests. Defaults to repository root.
