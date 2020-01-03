@@ -1,9 +1,12 @@
 #!/bin/bash
 
-echo "==="
-echo "Open Policy Agent"
+echo
+echo "---"
+echo
+echo "# Open Policy Agent"
 /opa version
-echo "==="
+echo
+echo "---"
 echo
 
 pwd
