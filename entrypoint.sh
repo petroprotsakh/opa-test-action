@@ -1,5 +1,7 @@
 #!/bin/bash
 
+/opa version
+
 IFS=';'
 mapfile -t lines <<< "$INPUT_TESTS"
 
