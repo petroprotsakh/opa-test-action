@@ -1,6 +1,13 @@
 #!/bin/bash
 
+echo "==="
+echo "Open Policy Agent"
 /opa version
+echo "==="
+echo
+
+pwd
+ls
 
 IFS=';'
 mapfile -t lines <<< "$INPUT_TESTS"
