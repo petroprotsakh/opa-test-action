@@ -4,4 +4,5 @@ RUN curl -L -o /opa https://openpolicyagent.org/downloads/latest/opa_linux_amd64
 RUN chmod 755 /opa
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+RUN /opa version
 ENTRYPOINT ["/entrypoint.sh"]
