@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 IFS=';'
 mapfile -t lines <<< "$INPUT_TESTS"
