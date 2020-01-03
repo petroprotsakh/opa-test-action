@@ -11,8 +11,4 @@ inputs:
     default: ./
 runs:
   using: docker
-  image: docker://openpolicyagent/opa:latest
-  args:
-    - test
-    - ${{ inputs.tests }}
-    - -v
+  image: Dockerfile
