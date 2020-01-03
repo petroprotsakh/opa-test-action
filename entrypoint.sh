@@ -19,5 +19,5 @@ for line in "${lines[@]}"; do
   read -r -a args <<< "$line"
   cmd="/opa test ${args[@]} -v"
   echo "Running: $cmd"
-  $cmd
+  eval "$cmd"
 done
