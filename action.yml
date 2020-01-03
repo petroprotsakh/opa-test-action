@@ -14,5 +14,5 @@ runs:
   image: docker://openpolicyagent/opa:latest
   args:
     - test
-    - ${{ inputs.args }}
+    - ${{ inputs.tests }}
     - -v
