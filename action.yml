@@ -1,14 +1,17 @@
-name: OPA Test
-description: Run Open Policy Agent tests
-author: Petro Protsakh
+name: "OPA Test"
+description: "Run Open Policy Agent tests"
+author: "Petro Protsakh"
 branding:
   icon: check-square
   color: green
 inputs:
   tests:
-    description: Rego file or directory path where to discover tests. Defaults to repository root.
+    description: "Rego file or directory path where to discover tests. Defaults to repository root."
     required: false
     default: ./
+  options:
+    description: "Additional OPA command line flags. Example: `--verbose --timeout 3`. See `opa test --help` for more."
+    required: false
 runs:
   using: docker
   image: Dockerfile
