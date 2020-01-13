@@ -6,12 +6,12 @@ echo "# Open Policy Agent"
 printf "\n\n"
 
 IFS=';'
-mapfile -t lines <<< "$INPUT_TESTS"
+mapfile -t lines < <(echo "$INPUT_TESTS" | grep -v "^$")
 
 e_code=0
 for line in "${lines[@]}"; do
   read -r -a args <<< "$line"
-  cmd="/opa test ${args[*]} -v"
+  cmd="/opa test ${args[*]}"
   echo " 🚀 Running: $cmd"
   printf "\n"
   eval "$cmd" || e_code=1
